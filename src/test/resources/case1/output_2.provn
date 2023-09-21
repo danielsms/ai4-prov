@@ -1,0 +1,14 @@
+document
+bundle uuid:c6de4b27-639e-4206-ab48-9ebfc0ffd552
+prefix pre_0 <http://orcid.org/>
+prefix foaf <http://xmlns.com/foaf/0.1/>
+prefix ex <http://example.com/#>
+prefix uuid <urn:uuid:>
+
+entity(ex:quote1,[prov:value = "A Little Provenance Goes a Long Way" %% xsd:string])
+entity(pre_0:0000-0002-3494-120X,[prov:type = 'prov:Person', foaf:name = "Luc Moreau" %% xsd:string])
+entity(pre_0:0000-0003-0183-6910,[prov:type = 'prov:Person', foaf:name = "Paul Groth" %% xsd:string])
+wasAttributedTo(ex:quote1, pre_0:0000-0002-3494-120X)
+wasAttributedTo(ex:quote1, pre_0:0000-0003-0183-6910)
+endBundle
+endDocument

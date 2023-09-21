@@ -1,0 +1,82 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix tmpl: <http://openprovenance.org/tmpl#> .
+@prefix var: <http://openprovenance.org/var#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://example.org/> .
+
+var:product a prov:Entity;
+           tmpl:value_0 ex:pr1.
+
+var:prod_title a prov:Entity;
+           tmpl:2dvalue_0_0 "Train an image classifier".
+           
+var:prod_summary a prov:Entity;
+           tmpl:2dvalue_0_0 "Train your own image classifier with your custom dataset. It comes also pretrained on the 1K ImageNet classes.".           
+
+var:prod_description a prov:Entity;
+           tmpl:2dvalue_0_0 "The deep learning revolution has brought significant advances in a number of fields [1], primarily linked to image and speech recognition. The standardization of image classification tasks like the [ImageNet Large Scale Visual Recognition Challenge](http://www.image-net.org/challenges/LSVRC/) [2] has resulted in a reliable way to compare top performing architectures.\\n This Docker container contains the tools to train an image classifier on your personal dataset. It is a highly customizable tool  that let's you choose between tens of different [top performing architectures](https://github.com/keras-team/keras-applications) and training parameters.\\n The container also comes with a pretrained general-purpose image classifier trained on ImageNet.\\n The PREDICT method expects an RGB image as input (or the url of an RGB image) and will return a JSON with the top 5 predictions.\\n <img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-image-classification-tf/master/images/imagenet.png'/>\\n **References**\\n [1]: Yann LeCun, Yoshua Bengio, and Geofrey Hinton. [Deep learning](https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf). Nature, 521(7553):436-444, May 2015.\\n [2]: Olga Russakovsky et al. [ImageNet Large Scale Visual Recognition Challenge](https://arxiv.org/abs/1409.0575). International Journal of Computer Vision (IJCV), 115(3):211-252, 2015.".
+
+var:prod_license a prov:Entity;
+           tmpl:2dvalue_0_0 "Apache 2.0".
+
+var:prod_citation a prov:Entity;
+           tmpl:2dvalue_0_0 "http://digital.csic.es/handle/10261/194498"^^xsd:uri.
+           
+var:prod_keywords a prov:Entity;
+           tmpl:2dvalue_0_0 "tensorflow";
+           tmpl:2dvalue_0_1 "docker";
+           tmpl:2dvalue_0_2 "deep learning";
+           tmpl:2dvalue_0_3 "trainable";
+           tmpl:2dvalue_0_4 "inference";
+           tmpl:2dvalue_0_5 "pre-trained";
+           tmpl:2dvalue_0_6 "image classification";
+           tmpl:2dvalue_0_7 "api-v2";
+           tmpl:2dvalue_0_8 "general purpose".
+
+var:prod_source a prov:Entity;
+           tmpl:2dvalue_0_0 "http://www.image-net.org/challenges/LSVRC"^^xsd:uri.
+           
+var:software a prov:Entity;
+           tmpl:value_0 ex:sf1.
+
+var:software_title a prov:Entity;
+           tmpl:2dvalue_0_0 "DEEP OC image classification".
+
+var:software_source a prov:Entity;
+           tmpl:2dvalue_0_0 "https://github.com/deephdc/image-classification-tf"^^xsd:uri;
+           tmpl:2dvalue_0_1 "https://hub.docker.com/r/deephdc/deep-oc-image-classification-tf"^^xsd:uri;
+           tmpl:2dvalue_0_2 "docker pull deephdc/deep-oc-image-classification-tf".
+           
+var:ci a prov:Entity;
+           tmpl:value_0 ex:ac1.
+           
+var:ci_title a prov:Entity;
+           tmpl:2dvalue_0_0 "Continuous Integration (Jenkins)".
+           
+var:ci_date a prov:Entity;
+           tmpl:2dvalue_0_0 "2019-01-01"^^xsd:date.
+
+var:ci_source a prov:Entity;
+           tmpl:2dvalue_0_0 "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-image-classification-tf/master"^^xsd:uri;
+           tmpl:2dvalue_0_1 "https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-image-classification-tf/job/master"^^xsd:uri .
+
+var:dataset a prov:Entity;
+           tmpl:value_0 ex:ds1.
+           
+var:dataset_title a prov:Entity;
+           tmpl:2dvalue_0_0 "default_imagenet.tar.xz".
+           
+var:dataset_source a prov:Entity;
+           tmpl:2dvalue_0_0 "https://api.cloud.ifca.es:8080/swift/v1/imagenet-tf/"^^xsd:uri.
+           
+var:challenge a prov:Entity;
+           tmpl:value_0 ex:ac2.
+
+var:challenge_title a prov:Entity;
+           tmpl:2dvalue_0_0 "ImageNet Large Scale Visual Recognition Challenge (ILSVRC)".
+           
+var:challenge_source a prov:Entity;
+           tmpl:2dvalue_0_0 "http://www.image-net.org/challenges/LSVRC"^^xsd:uri;
+           tmpl:2dvalue_0_1 "https://github.com/deephdc/DEEP-OC-image-classification-tf"^^xsd:uri.
+           

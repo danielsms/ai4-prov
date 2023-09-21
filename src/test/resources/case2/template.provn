@@ -1,0 +1,42 @@
+document
+ 
+  prefix var <http://openprovenance.org/var#>
+  prefix vargen <http://openprovenance.org/vargen#>
+  prefix tmpl <http://openprovenance.org/tmpl#>
+  prefix dc <http://purl.org/dc/elements/1.1/>
+   
+  bundle vargen:bundleId
+    entity(var:product, [prov:type='prov:Entity', 
+    	tmpl:label='var:prod_title', 
+    	dc:summary='var:prod_summary', 
+    	dc:subject='var:prod_keywords', 
+    	dc:license='var:prod_license', 
+    	dc:bibliographicCitationMore='var:prod_citation', 
+    	dc:source='var:prod_source',
+		dc:description='var:prod_description'
+    ])
+	agent(var:software, [prov:type='prov:SoftwareAgent', 
+		tmpl:label='var:software_title', 
+		dc:source='var:software_source'
+	])
+	activity(var:ci, - , - , [prov:type='prov:Activity', 
+		tmpl:label='var:ci_title', 
+		dc:source='var:ci_source', 
+		prov:endedAtTime='var:ci_date'
+	])
+	entity(var:dataset, [prov:type='prov:Entity',
+		tmpl:label='var:dataset_title',
+		dc:source='var:dataset_source'
+	])
+	activity(var:challenge, - , - , [prov:type='prov:Activity', 
+		tmpl:label='var:challenge_title', 
+		dc:source='var:challenge_source'
+	])
+	wasAttributedTo(var:product,var:software)
+	wasGeneratedBy(var:product,var:ci,-)
+	wasAssociatedWith(var:ci,var:software,-)
+	used(var:ci,var:dataset,-)
+	wasInfluencedBy(var:ci,var:challenge)
+  endBundle
+
+endDocument
